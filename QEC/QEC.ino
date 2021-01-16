@@ -40,16 +40,16 @@ void Turn(){
   //order of operations for turning
   switch(turn_idx){
     case 0:
-      Right();
+      Left();
       break;
     case 1:
-      Left();
+      Right();
       break;
     case 2:
-      Left();
+      Right();
       break;
     case 3:
-      Right();
+      Left();
       route_idx = 1;
       break;
   }
@@ -127,19 +127,19 @@ void loop() {
   }
   //repeat all initial movements except backwards
   else if(route_idx == 2){
-    Left();
+    Right();
     Bck();
     delay(t[3]);
     Stop();
-    Right();
+    Left();
     Bck();
     delay(t[2]);
     Stop();
-    Right();
+    Left();
     Bck();
     delay(t[1]);
     Stop();
-    Left();
+    Right();
     Bck();
     delay(t[0]);
     Stop();
